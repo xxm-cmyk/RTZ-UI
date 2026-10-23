@@ -45,7 +45,7 @@ return function(Theme, Parent, DialogCheck)
 		},
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 4),
+			CornerRadius = UDim.new(0, 7),
 		}),
 		New("UIStroke", {
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
@@ -69,7 +69,7 @@ return function(Theme, Parent, DialogCheck)
 		SetTransparency(1)
 	end)
 	Creator.AddSignal(Button.Frame.MouseButton1Up, function()
-		SetTransparency(0.97)
+		SetTransparency(0.94)
 	end)
 
 	return Button

@@ -50,7 +50,7 @@ function TabModule:New(Title, Icon, Parent)
 	end
 
 	Tab.Frame = New("TextButton", {
-		Size = UDim2.new(1, 0, 0, 36),
+		Size = UDim2.new(1, -4, 0, 40),
 		BackgroundTransparency = 1,
 		Parent = Parent,
 		ThemeTag = {
@@ -58,11 +58,11 @@ function TabModule:New(Title, Icon, Parent)
 		},
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 7),
+			CornerRadius = UDim.new(0, 6),
 		}),
 		New("TextLabel", {
 			AnchorPoint = Vector2.new(0, 0.5),
-			Position = Icon and UDim2.new(0, 30, 0.5, 0) or UDim2.new(0, 12, 0.5, 0),
+			Position = Icon and UDim2.new(0, 38, 0.5, 0) or UDim2.new(0, 16, 0.5, 0),
 			Text = Title,
 			RichText = true,
 			TextColor3 = Color3.fromRGB(255, 255, 255),
@@ -72,7 +72,7 @@ function TabModule:New(Title, Icon, Parent)
 				Enum.FontWeight.Regular,
 				Enum.FontStyle.Normal
 			),
-			TextSize = 12,
+			TextSize = 13,
 			TextXAlignment = "Left",
 			TextYAlignment = "Center",
 			Size = UDim2.new(1, -12, 1, 0),
@@ -83,8 +83,8 @@ function TabModule:New(Title, Icon, Parent)
 		}),
 		New("ImageLabel", {
 			AnchorPoint = Vector2.new(0, 0.5),
-			Size = UDim2.fromOffset(17, 17),
-			Position = UDim2.new(0, 8, 0.5, 0),
+			Size = UDim2.fromOffset(18, 18),
+			Position = UDim2.new(0, 12, 0.5, 0),
 			BackgroundTransparency = 1,
 			Image = Icon and Icon or nil,
 			ThemeTag = {
@@ -129,16 +129,16 @@ function TabModule:New(Title, Icon, Parent)
 	Tab.Motor, Tab.SetTransparency = Creator.SpringMotor(1, Tab.Frame, "BackgroundTransparency")
 
 	Creator.AddSignal(Tab.Frame.MouseEnter, function()
-		Tab.SetTransparency(Tab.Selected and 0.91 or 0.94)
+		Tab.SetTransparency(Tab.Selected and 0.78 or 0.91)
 	end)
 	Creator.AddSignal(Tab.Frame.MouseLeave, function()
-		Tab.SetTransparency(Tab.Selected and 0.89 or 1)
+		Tab.SetTransparency(Tab.Selected and 0.78 or 1)
 	end)
 	Creator.AddSignal(Tab.Frame.MouseButton1Down, function()
-		Tab.SetTransparency(0.88)
+		Tab.SetTransparency(0.84)
 	end)
 	Creator.AddSignal(Tab.Frame.MouseButton1Up, function()
-		Tab.SetTransparency(Tab.Selected and 0.85 or 0.89)
+		Tab.SetTransparency(Tab.Selected and 0.76 or 0.87)
 	end)
 	Creator.AddSignal(Tab.Frame.MouseButton1Click, function()
 		TabModule:SelectTab(TabIndex)
@@ -174,7 +174,7 @@ function TabModule:SelectTab(Tab)
 		TabObject.SetTransparency(1)
 		TabObject.Selected = false
 	end
-	TabModule.Tabs[Tab].SetTransparency(0.91)
+	TabModule.Tabs[Tab].SetTransparency(0.78)
 	TabModule.Tabs[Tab].Selected = true
 
 	Window.TabDisplay.Text = TabModule.Tabs[Tab].Name

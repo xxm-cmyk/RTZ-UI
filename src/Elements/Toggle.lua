@@ -27,7 +27,7 @@ function Element:New(Idx, Config)
 
 	local ToggleCircle = New("ImageLabel", {
 		AnchorPoint = Vector2.new(0, 0.5),
-		Size = UDim2.fromOffset(14, 14),
+		Size = UDim2.fromOffset(16, 16),
 		Position = UDim2.new(0, 2, 0.5, 0),
 		Image = "http://www.roblox.com/asset/?id=12266946128",
 		ImageTransparency = 0.5,
@@ -44,7 +44,7 @@ function Element:New(Idx, Config)
 	})
 
 	local ToggleSlider = New("Frame", {
-		Size = UDim2.fromOffset(36, 18),
+		Size = UDim2.fromOffset(40, 20),
 		AnchorPoint = Vector2.new(1, 0.5),
 		Position = UDim2.new(1, -10, 0.5, 0),
 		Parent = ToggleFrame.Frame,
@@ -54,7 +54,7 @@ function Element:New(Idx, Config)
 		},
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 9),
+			CornerRadius = UDim.new(0, 10),
 		}),
 		ToggleBorder,
 		ToggleCircle,
@@ -73,8 +73,8 @@ function Element:New(Idx, Config)
 		Creator.OverrideTag(ToggleCircle, { ImageColor3 = Toggle.Value and "ToggleToggled" or "ToggleSlider" })
 		TweenService:Create(
 			ToggleCircle,
-			TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
-			{ Position = UDim2.new(0, Toggle.Value and 19 or 2, 0.5, 0) }
+			TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
+			{ Position = UDim2.new(0, Toggle.Value and 21 or 2, 0.5, 0) }
 		):Play()
 		TweenService:Create(
 			ToggleSlider,

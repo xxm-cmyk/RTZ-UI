@@ -32,7 +32,7 @@ function Dialog:Create()
 		Parent = Dialog.Window.Root,
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 10),
+			CornerRadius = UDim.new(0, 12),
 		}),
 	})
 
@@ -94,7 +94,7 @@ function Dialog:Create()
 	local ScaleMotor, Scale = Creator.SpringMotor(1.1, NewDialog.Scale, "Scale")
 
 	NewDialog.Root = New("CanvasGroup", {
-		Size = UDim2.fromOffset(300, 165),
+		Size = UDim2.fromOffset(320, 180),
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		Position = UDim2.fromScale(0.5, 0.5),
 		GroupTransparency = 1,
@@ -107,7 +107,7 @@ function Dialog:Create()
 			CornerRadius = UDim.new(0, 10),
 		}),
 		New("UIStroke", {
-			Transparency = 0.68,
+			Transparency = 0.58,
 			ThemeTag = {
 				Color = "DialogBorder",
 			},

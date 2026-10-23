@@ -3,43 +3,50 @@ name: Release
 on:
   workflow_dispatch:
   release:
-    types: [ published, prereleased ]
-    
+    types: [published, prereleased]
+
 permissions:
   contents: write
-  packages: write
 
 jobs:
   publish-release:
     runs-on: ubuntu-latest
 
     steps:
-    - name: GitHub Checkout
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup PNPM
-      uses: pnpm/action-setup@v2.2.4
-      with:
-        version: 7.25.1
-        run_install: true
-    
-    - name: Setup Aftman
-      uses: ok-nick/setup-aftman@v0.3.0
-    
-    - name: Install Rojo, Lune and DarkLua
-      run: aftman install
-        
-    - name: Build and Compile
-      run: |
-        pnpm run rojo --verbose
-      
-    - name: Bundle Luau
-      run: pnpm run bundle
-      
-    - name: Upload Release Assets
-      uses: alexellis/upload-assets@0.4.0
-      env:
-        ACTIONS_STEP_DEBUG: true
-        GITHUB_TOKEN: ${{ github.token }}
-      with:
-        asset_paths: '["dist/main.rbxm", "dist/main.lua"]'
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7.25.1
+          run_install: true
+
+      - name: Setup Aftman
+        uses: ok-nick/setup-aftman@v0.3.0
+
+      - name: Install build tools
+        run: aftman install
+
+      - name: Build library
+        run: pnpm run bundle
+
+      - name: Validate build artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in dist/main.lua dist/main.rbxm; do
+            if [[ ! -s "$file" ]]; then
+              echo "::error::Build artifact is missing or empty: $file"
+              exit 1
+            fi
+          done
+          echo "Build artifacts:"
+          ls -lh dist/main.lua dist/main.rbxm
+
+      - name: Upload release assets
+        uses: alexellis/upload-assets@0.4.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          asset_paths: '["dist/main.rbxm", "dist/main.lua"]'

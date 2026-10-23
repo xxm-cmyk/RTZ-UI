@@ -121,6 +121,14 @@ return function(Config)
 		Position = Window.Position,
 		Parent = Config.Parent,
 	}, {
+		New("UICorner", {
+			CornerRadius = UDim.new(0, 12),
+		}),
+		New("UIStroke", {
+			Color = Color3.fromRGB(255, 255, 255),
+			Transparency = 0.82,
+			Thickness = 1,
+		}),
 		Window.AcrylicPaint.Frame,
 		Window.TabDisplay,
 		Window.ContainerCanvas,

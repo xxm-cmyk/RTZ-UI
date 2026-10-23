@@ -117,6 +117,7 @@ return function(Config)
 
 	Window.Root = New("Frame", {
 		BackgroundTransparency = 1,
+		ClipsDescendants = true,
 		Size = Window.Size,
 		Position = Window.Position,
 		Parent = Config.Parent,

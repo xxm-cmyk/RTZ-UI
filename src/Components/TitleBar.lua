@@ -17,7 +17,7 @@ return function(Config)
 		}
 
 		Button.Frame = New("TextButton", {
-			Size = UDim2.new(0, 36, 1, -8),
+			Size = UDim2.new(0, 46, 1, -8),
 			AnchorPoint = Vector2.new(1, 0),
 			BackgroundTransparency = 1,
 			Parent = Parent,
@@ -28,7 +28,7 @@ return function(Config)
 			},
 		}, {
 			New("UICorner", {
-				CornerRadius = UDim.new(0, 8),
+				CornerRadius = UDim.new(0, 4),
 			}),
 			New("ImageLabel", {
 				Image = Icon,
@@ -50,7 +50,7 @@ return function(Config)
 				Button.Frame.BackgroundColor3 = Color3.fromRGB(196, 43, 28)
 				SetTransparency(0)
 			else
-				SetTransparency(0.92)
+				SetTransparency(0.9)
 			end
 		end)
 		AddSignal(Button.Frame.MouseLeave, function()
@@ -64,7 +64,7 @@ return function(Config)
 				Button.Frame.BackgroundColor3 = Color3.fromRGB(160, 32, 20)
 				SetTransparency(0)
 			else
-				SetTransparency(0.96)
+				SetTransparency(0.94)
 			end
 		end)
 		AddSignal(Button.Frame.MouseButton1Up, function()
@@ -107,7 +107,7 @@ return function(Config)
 					Enum.FontWeight.Regular,
 					Enum.FontStyle.Normal
 				),
-				TextSize = 12,
+				TextSize = 13,
 				TextXAlignment = "Left",
 				TextYAlignment = "Center",
 				Size = UDim2.fromScale(0, 1),
@@ -164,10 +164,10 @@ return function(Config)
 			},
 		})
 	end, true)
-	TitleBar.MaxButton = BarButton(Assets.Max, UDim2.new(1, -40, 0, 4), TitleBar.Frame, function()
+	TitleBar.MaxButton = BarButton(Assets.Max, UDim2.new(1, -50, 0, 4), TitleBar.Frame, function()
 		Config.Window.Maximize(not Config.Window.Maximized)
 	end)
-	TitleBar.MinButton = BarButton(Assets.Min, UDim2.new(1, -80, 0, 4), TitleBar.Frame, function()
+	TitleBar.MinButton = BarButton(Assets.Min, UDim2.new(1, -96, 0, 4), TitleBar.Frame, function()
 		Library.Window:Minimize()
 	end)
 

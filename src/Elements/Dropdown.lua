@@ -176,6 +176,24 @@ function Element:New(Idx, Config)
 
 	Creator.AddSignal(DropdownInner:GetPropertyChangedSignal("AbsolutePosition"), RecalculateListPosition)
 
+	Creator.AddSignal(DropdownInner.MouseEnter, function()
+		TweenService:Create(DropdownInner, TweenInfo.new(0.12, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundTransparency = 0.88,
+		}):Play()
+	end)
+
+	Creator.AddSignal(DropdownInner.MouseLeave, function()
+		TweenService:Create(DropdownInner, TweenInfo.new(0.16, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundTransparency = 0.94,
+		}):Play()
+	end)
+
+	Creator.AddSignal(DropdownInner.MouseButton1Down, function()
+		TweenService:Create(DropdownInner, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundTransparency = 0.84,
+		}):Play()
+	end)
+
 	Creator.AddSignal(DropdownInner.MouseButton1Click, function()
 		Dropdown:Open()
 	end)

@@ -36,8 +36,8 @@ function Element:New(Idx, Config)
 
 	local SliderDot = New("ImageLabel", {
 		AnchorPoint = Vector2.new(0, 0.5),
-		Position = UDim2.new(0, -7, 0.5, 0),
-		Size = UDim2.fromOffset(14, 14),
+		Position = UDim2.new(0, -6, 0.5, 0),
+		Size = UDim2.fromOffset(12, 12),
 		Image = "http://www.roblox.com/asset/?id=12266946128",
 		ThemeTag = {
 			ImageColor3 = "Accent",
@@ -80,7 +80,7 @@ function Element:New(Idx, Config)
 	})
 
 	local SliderInner = New("Frame", {
-		Size = UDim2.new(1, 0, 0, 4),
+		Size = UDim2.new(1, 0, 0, 5),
 		AnchorPoint = Vector2.new(1, 0.5),
 		Position = UDim2.new(1, -10, 0.5, 0),
 		BackgroundTransparency = 0.4,
@@ -139,7 +139,7 @@ function Element:New(Idx, Config)
 
 	function Slider:SetValue(Value)
 		self.Value = Library:Round(math.clamp(Value, Slider.Min, Slider.Max), Slider.Rounding)
-		SliderDot.Position = UDim2.new((self.Value - Slider.Min) / (Slider.Max - Slider.Min), -7, 0.5, 0)
+		SliderDot.Position = UDim2.new((self.Value - Slider.Min) / (Slider.Max - Slider.Min), -6, 0.5, 0)
 		SliderFill.Size = UDim2.fromScale((self.Value - Slider.Min) / (Slider.Max - Slider.Min), 1)
 		SliderDisplay.Text = tostring(self.Value)
 

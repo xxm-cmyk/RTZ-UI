@@ -55,7 +55,7 @@ function Element:New(Idx, Config)
 	})
 
 	local DisplayFrame = New("ImageLabel", {
-		Size = UDim2.fromOffset(26, 26),
+		Size = UDim2.fromOffset(28, 28),
 		Position = UDim2.new(1, -10, 0.5, 0),
 		AnchorPoint = Vector2.new(1, 0.5),
 		Parent = ColorpickerFrame.Frame,
@@ -65,7 +65,7 @@ function Element:New(Idx, Config)
 		TileSize = UDim2.fromOffset(40, 40),
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 7),
+			CornerRadius = UDim.new(0, 6),
 		}),
 		DisplayFrameColor,
 	})

@@ -49,7 +49,7 @@ function Element:New(Idx, Config)
 	})
 
 	local KeybindDisplayFrame = New("TextButton", {
-		Size = UDim2.fromOffset(0, 30),
+		Size = UDim2.fromOffset(0, 32),
 		Position = UDim2.new(1, -10, 0.5, 0),
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 0.9,
@@ -67,7 +67,7 @@ function Element:New(Idx, Config)
 			PaddingRight = UDim.new(0, 8),
 		}),
 		New("UIStroke", {
-			Transparency = 0.5,
+			Transparency = 0.58,
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 			ThemeTag = {
 				Color = "InElementBorder",

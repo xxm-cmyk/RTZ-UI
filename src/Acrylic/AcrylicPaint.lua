@@ -8,7 +8,7 @@ return function(props)
 
 	AcrylicPaint.Frame = New("Frame", {
 		Size = UDim2.fromScale(1, 1),
-		BackgroundTransparency = 0.84,
+		BackgroundTransparency = 0.78,
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BorderSizePixel = 0,
 	}, {
@@ -21,7 +21,7 @@ return function(props)
 			Position = UDim2.new(0.5, 0, 0.5, 0),
 			BackgroundTransparency = 1,
 			ImageColor3 = Color3.fromRGB(0, 0, 0),
-			ImageTransparency = 0.82,
+			ImageTransparency = 0.86,
 		}),
 
 		New("UICorner", {
@@ -29,7 +29,7 @@ return function(props)
 		}),
 
 		New("Frame", {
-			BackgroundTransparency = 0.28,
+			BackgroundTransparency = 0.22,
 			Size = UDim2.fromScale(1, 1),
 			Name = "Background",
 			ThemeTag = {
@@ -43,7 +43,7 @@ return function(props)
 
 		New("Frame", {
 			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-			BackgroundTransparency = 0.62,
+			BackgroundTransparency = 0.72,
 			Size = UDim2.fromScale(1, 1),
 		}, {
 			New("UICorner", {
@@ -60,7 +60,7 @@ return function(props)
 
 		New("ImageLabel", {
 			Image = "rbxassetid://9968344105",
-			ImageTransparency = 0.98,
+			ImageTransparency = 0.985,
 			ScaleType = Enum.ScaleType.Tile,
 			TileSize = UDim2.new(0, 128, 0, 128),
 			Size = UDim2.fromScale(1, 1),

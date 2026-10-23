@@ -33,12 +33,12 @@ return function(Theme, Parent, DialogCheck)
 		},
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 4),
+			CornerRadius = UDim.new(0, 7),
 		}),
 	})
 
 	Button.Frame = New("TextButton", {
-		Size = UDim2.new(0, 0, 0, 32),
+		Size = UDim2.new(0, 0, 0, 34),
 		Parent = Parent,
 		ThemeTag = {
 			BackgroundColor3 = "DialogButton",
@@ -49,7 +49,7 @@ return function(Theme, Parent, DialogCheck)
 		}),
 		New("UIStroke", {
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-			Transparency = 0.65,
+			Transparency = 0.78,
 			ThemeTag = {
 				Color = "DialogButtonBorder",
 			},
@@ -60,7 +60,7 @@ return function(Theme, Parent, DialogCheck)
 
 	local Motor, SetTransparency = Creator.SpringMotor(1, Button.HoverFrame, "BackgroundTransparency", DialogCheck)
 	Creator.AddSignal(Button.Frame.MouseEnter, function()
-		SetTransparency(0.97)
+		SetTransparency(0.94)
 	end)
 	Creator.AddSignal(Button.Frame.MouseLeave, function()
 		SetTransparency(1)

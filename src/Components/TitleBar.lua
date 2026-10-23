@@ -11,7 +11,7 @@ return function(Config)
 
 	local Library = require(Root)
 
-	local function BarButton(Icon, Pos, Parent, Callback)
+	local function BarButton(Icon, Pos, Parent, Callback, IsClose)
 		local Button = {
 			Callback = Callback or function() end,
 		}
@@ -46,16 +46,34 @@ return function(Config)
 		local Motor, SetTransparency = Creator.SpringMotor(1, Button.Frame, "BackgroundTransparency")
 
 		AddSignal(Button.Frame.MouseEnter, function()
-			SetTransparency(0.94)
+			if IsClose then
+				Button.Frame.BackgroundColor3 = Color3.fromRGB(196, 43, 28)
+				SetTransparency(0)
+			else
+				SetTransparency(0.92)
+			end
 		end)
 		AddSignal(Button.Frame.MouseLeave, function()
+			if IsClose then
+				Button.Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
 			SetTransparency(1, true)
 		end)
 		AddSignal(Button.Frame.MouseButton1Down, function()
-			SetTransparency(0.96)
+			if IsClose then
+				Button.Frame.BackgroundColor3 = Color3.fromRGB(160, 32, 20)
+				SetTransparency(0)
+			else
+				SetTransparency(0.96)
+			end
 		end)
 		AddSignal(Button.Frame.MouseButton1Up, function()
-			SetTransparency(0.94)
+			if IsClose then
+				Button.Frame.BackgroundColor3 = Color3.fromRGB(196, 43, 28)
+				SetTransparency(0)
+			else
+				SetTransparency(0.92)
+			end
 		end)
 		AddSignal(Button.Frame.MouseButton1Click, Button.Callback)
 

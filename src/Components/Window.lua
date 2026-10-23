@@ -37,7 +37,7 @@ return function(Config)
 	Window.TabWidth = Config.TabWidth
 
 	local Selector = New("Frame", {
-		Size = UDim2.fromOffset(4, 0),
+		Size = UDim2.fromOffset(3, 0),
 		BackgroundColor3 = Color3.fromRGB(76, 194, 255),
 		Position = UDim2.fromOffset(0, 17),
 		AnchorPoint = Vector2.new(0, 0.5),
@@ -72,7 +72,7 @@ return function(Config)
 
 	local TabFrame = New("Frame", {
 		Size = UDim2.new(0, Window.TabWidth, 1, -66),
-		Position = UDim2.new(0, 12, 0, 54),
+		Position = UDim2.new(0, 14, 0, 54),
 		BackgroundTransparency = 1,
 		ClipsDescendants = true,
 	}, {
@@ -89,7 +89,7 @@ return function(Config)
 		TextXAlignment = "Left",
 		TextYAlignment = "Center",
 		Size = UDim2.new(1, -16, 0, 28),
-		Position = UDim2.fromOffset(Window.TabWidth + 26, 56),
+		Position = UDim2.fromOffset(Window.TabWidth + 32, 56),
 		BackgroundTransparency = 1,
 		ThemeTag = {
 			TextColor3 = "Text",
@@ -107,8 +107,8 @@ return function(Config)
 	})
 
 	Window.ContainerCanvas = New("Frame", {
-		Size = UDim2.new(1, -Window.TabWidth - 32, 1, -102),
-		Position = UDim2.fromOffset(Window.TabWidth + 26, 90),
+		Size = UDim2.new(1, -Window.TabWidth - 42, 1, -102),
+		Position = UDim2.fromOffset(Window.TabWidth + 32, 90),
 		BackgroundTransparency = 1,
 	}, {
 		Window.ContainerAnim,
@@ -123,11 +123,11 @@ return function(Config)
 		Parent = Config.Parent,
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 12),
+			CornerRadius = UDim.new(0, 10),
 		}),
 		New("UIStroke", {
 			Color = Color3.fromRGB(255, 255, 255),
-			Transparency = 0.82,
+			Transparency = 0.72,
 			Thickness = 1,
 		}),
 		Window.AcrylicPaint.Frame,
@@ -136,7 +136,7 @@ return function(Config)
 			BackgroundTransparency = 0.72,
 			BorderSizePixel = 0,
 			Size = UDim2.new(0, 1, 1, -58),
-			Position = UDim2.new(0, Window.TabWidth + 18, 0, 48),
+			Position = UDim2.new(0, Window.TabWidth + 24, 0, 48),
 			ThemeTag = { BackgroundColor3 = "TitleBarLine" },
 		}),
 		Window.TabDisplay,

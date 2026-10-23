@@ -41,7 +41,7 @@ return {
 	DialogInputLine = Color3.fromRGB(218, 218, 218),
 
 	Text = Color3.fromRGB(32, 32, 32),
-	SubText = Color3.fromRGB(0, 120, 212),
+	SubText = Color3.fromRGB(96, 96, 96),
 	Hover = Color3.fromRGB(96, 96, 96),
 	HoverChange = 0.06,
 }

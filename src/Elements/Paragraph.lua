@@ -12,8 +12,8 @@ function Paragraph:New(Config)
 	Config.Content = Config.Content or ""
 
 	local Paragraph = require(Components.Element)(Config.Title, Config.Content, Paragraph.Container, false)
-	Paragraph.Frame.BackgroundTransparency = 0.92
-	Paragraph.Border.Transparency = 0.6
+	Paragraph.Frame.BackgroundTransparency = 0.94
+	Paragraph.Border.Transparency = 0.72
 
 	return Paragraph
 end

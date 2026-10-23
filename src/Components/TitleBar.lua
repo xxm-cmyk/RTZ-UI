@@ -17,7 +17,7 @@ return function(Config)
 		}
 
 		Button.Frame = New("TextButton", {
-			Size = UDim2.new(0, 34, 1, -8),
+			Size = UDim2.new(0, 36, 1, -8),
 			AnchorPoint = Vector2.new(1, 0),
 			BackgroundTransparency = 1,
 			Parent = Parent,
@@ -28,7 +28,7 @@ return function(Config)
 			},
 		}, {
 			New("UICorner", {
-				CornerRadius = UDim.new(0, 7),
+				CornerRadius = UDim.new(0, 8),
 			}),
 			New("ImageLabel", {
 				Image = Icon,

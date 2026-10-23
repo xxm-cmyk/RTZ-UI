@@ -45,7 +45,7 @@ return function(Parent, Acrylic)
 	})
 
 	Textbox.Frame = New("Frame", {
-		Size = UDim2.new(0, 0, 0, 30),
+		Size = UDim2.new(0, 0, 0, 32),
 		BackgroundTransparency = Acrylic and 0.9 or 0,
 		Parent = Parent,
 		ThemeTag = {
@@ -53,11 +53,11 @@ return function(Parent, Acrylic)
 		},
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 4),
+			CornerRadius = UDim.new(0, 6),
 		}),
 		New("UIStroke", {
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-			Transparency = Acrylic and 0.5 or 0.65,
+			Transparency = Acrylic and 0.42 or 0.58,
 			ThemeTag = {
 				Color = Acrylic and "InElementBorder" or "DialogButtonBorder",
 			},

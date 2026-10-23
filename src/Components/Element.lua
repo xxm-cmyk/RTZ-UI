@@ -50,15 +50,15 @@ return function(Title, Desc, Parent, Hover)
 			VerticalAlignment = Enum.VerticalAlignment.Center,
 		}),
 		New("UIPadding", {
-			PaddingBottom = UDim.new(0, 13),
-			PaddingTop = UDim.new(0, 13),
+			PaddingBottom = UDim.new(0, 12),
+			PaddingTop = UDim.new(0, 12),
 		}),
 		Element.TitleLabel,
 		Element.DescLabel,
 	})
 
 	Element.Border = New("UIStroke", {
-		Transparency = 0.5,
+		Transparency = 0.62,
 		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 		Color = Color3.fromRGB(0, 0, 0),
 		ThemeTag = {
@@ -68,7 +68,7 @@ return function(Title, Desc, Parent, Hover)
 
 	Element.Frame = New("TextButton", {
 		Size = UDim2.new(1, 0, 0, 0),
-		BackgroundTransparency = 0.89,
+		BackgroundTransparency = 0.93,
 		BackgroundColor3 = Color3.fromRGB(130, 130, 130),
 		Parent = Parent,
 		AutomaticSize = Enum.AutomaticSize.Y,
@@ -80,7 +80,7 @@ return function(Title, Desc, Parent, Hover)
 		},
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 4),
+			CornerRadius = UDim.new(0, 6),
 		}),
 		Element.Border,
 		Element.LabelHolder,

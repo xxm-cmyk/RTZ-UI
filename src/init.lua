@@ -115,10 +115,10 @@ function Library:CreateWindow(Config)
 	end
 
 	Library.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
-	Library.UseAcrylic = Config.Acrylic or false
-	Library.Acrylic = Config.Acrylic or false
+	Library.UseAcrylic = Config.Acrylic ~= false
+	Library.Acrylic = Config.Acrylic ~= false
 	Library.Theme = Config.Theme or "Dark"
-	if Config.Acrylic then
+	if Library.UseAcrylic then
 		Acrylic.init()
 	end
 

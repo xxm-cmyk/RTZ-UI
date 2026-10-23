@@ -163,7 +163,7 @@ return function(Config)
 				},
 			},
 		})
-	end)
+	end, true)
 	TitleBar.MaxButton = BarButton(Assets.Max, UDim2.new(1, -40, 0, 4), TitleBar.Frame, function()
 		Config.Window.Maximize(not Config.Window.Maximized)
 	end)

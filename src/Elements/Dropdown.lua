@@ -62,10 +62,10 @@ function Element:New(Idx, Config)
 	})
 
 	local DropdownInner = New("TextButton", {
-		Size = UDim2.fromOffset(160, 30),
+		Size = UDim2.fromOffset(180, 32),
 		Position = UDim2.new(1, -10, 0.5, 0),
 		AnchorPoint = Vector2.new(1, 0.5),
-		BackgroundTransparency = 0.9,
+		BackgroundTransparency = 0.94,
 		Parent = DropdownFrame.Frame,
 		ThemeTag = {
 			BackgroundColor3 = "DropdownFrame",
@@ -75,7 +75,7 @@ function Element:New(Idx, Config)
 			CornerRadius = UDim.new(0, 7),
 		}),
 		New("UIStroke", {
-			Transparency = 0.5,
+			Transparency = 0.58,
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 			ThemeTag = {
 				Color = "InElementBorder",
@@ -86,7 +86,7 @@ function Element:New(Idx, Config)
 	})
 
 	local DropdownListLayout = New("UIListLayout", {
-		Padding = UDim.new(0, 3),
+		Padding = UDim.new(0, 4),
 	})
 
 	local DropdownScrollFrame = New("ScrollingFrame", {
@@ -297,7 +297,7 @@ function Element:New(Idx, Config)
 			})
 
 			local Button = New("TextButton", {
-				Size = UDim2.new(1, -5, 0, 32),
+				Size = UDim2.new(1, -5, 0, 34),
 				BackgroundTransparency = 1,
 				ZIndex = 23,
 				Text = "",

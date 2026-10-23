@@ -50,7 +50,7 @@ function Element:New(Idx, Config)
 		Parent = ColorpickerFrame.Frame,
 	}, {
 		New("UICorner", {
-			CornerRadius = UDim.new(0, 7),
+			CornerRadius = UDim.new(0, 6),
 		}),
 	})
 

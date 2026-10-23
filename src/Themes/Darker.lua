@@ -15,7 +15,7 @@ return {
 	InElementBorder = Color3.fromRGB(70, 70, 70),
 	ElementTransparency = 0.72,
 
-	DropdownFrame = Color3.fromRGB(120, 120, 120),
+	DropdownFrame = Color3.fromRGB(48, 48, 48),
 	DropdownHolder = Color3.fromRGB(32, 32, 32),
 	DropdownBorder = Color3.fromRGB(40, 40, 40),
 
@@ -26,5 +26,5 @@ return {
 	DialogButtonBorder = Color3.fromRGB(70, 70, 70),
 	DialogBorder = Color3.fromRGB(50, 50, 50),
 	DialogInput = Color3.fromRGB(38, 38, 38),
-	DialogInputLine = Color3.fromRGB(120, 120, 120),
+	DialogInputLine = Color3.fromRGB(48, 48, 48),
 }
